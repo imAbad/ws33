@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+<main id="main">
+  <!-- ======= Services Section ======= -->
+  <section class="section-services section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">Nuestros Servicios</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+              <div class="card-box-ico">
+                <span class="bi bi-house"></span>
+              </div>
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">¿Quieres Vender o Rentar tu propiedad? Contactanos!</h2>
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                Contamos con excelentes medios de promoción para manejar tu propiedad y asesores capacitados que agilizaran el tiempo de promoción y gestoría de tu propiedad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-box-c foo">
+          <div class="card-header-c d-flex">
+            <div class="card-box-ico">
+              <span class="bi bi-house"></span>
+            </div>
+            <div class="card-title-c align-self-center">
+              <h2 class="title-c">Venta de Propiedades</h2>
+            </div>
+          </div>
+          <div class="card-body-c">
+            <p class="content-c">
+              Ofrecemos las mejores propiedades en Venta del puerto de Acapulco, Chilpancingo, CDMX, Cuernavaca y otros destinos del pais.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+              <div class="card-box-ico">
+                <span class="bi bi-check2-all"></span>
+              </div>
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">Renta de Propiedades</h2>
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                Te ofrecemos propiedades en renta en las mejores zonas exclusivas en toda la franja turística de Acapulco.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+              <div class="card-box-ico">
+                <img src='{% static "img/logos/yate.svg" %}' 
+                 alt="" class="img-fluid">
+              </div>
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">Venta y Renta de Yates</h2>
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                Contamos con una amplia variedad de Yates en renta y venta para paseo y pesca en todo Acapulco.
+                Aquí Podrás encontrar todo tipo de embarcaciones para poder vivir una experiencia inolvidable a bordo. Elige tu embarcación ideal y nosotros nos ocupamos del resto; todas las embarcaciones cuentan con una tripulación perfectamente calificada para otorgarte el mejor servicio.
+                <p/>
+                ¡Tu mejor experiencia, a un clic de distancia!
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Services Section -->
+  {% endblock%}

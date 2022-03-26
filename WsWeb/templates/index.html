@@ -1,0 +1,589 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ======= Intro Section ======= -->
+<div class="intro intro-carousel swiper position-relative">
+    <div class="swiper-wrapper">
+      <img
+        class="swiper-slide carousel-item-a intro-item bg-image"
+        
+        src='{% static "img/slide-1.jpg"%}'>
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <p class="intro-title-top">
+                      Boulevard de las Palmas <br />
+                      Acapulco, Gro.
+                    </p>
+                    <h1 class="intro-title mb-4">
+                      <span class="color-b">Departamento </span> de Playa <br />
+                      Condominio Aquarelle
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                      <a href="#"><span class="price-a">renta | $ 80,000 / Mensual  </span></a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </img>
+      <img
+        class="swiper-slide carousel-item-a intro-item bg-image"
+        src='{% static "img/slide-2.jpg"%}'
+        
+      >
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <p class="intro-title-top">
+                      Fracc. Las Brisas <br />
+                      Acapulco, Gro.
+                    </p>
+                    <h1 class="intro-title mb-4">
+                      <span class="color-b">Residencia </span> frente a la Bahía de Santa Lucia <br />
+                      
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                      <a href="#"><span class="price-a">renta | $ 90,000 / Mensual</span></a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </img>
+      <img
+        class="swiper-slide carousel-item-a intro-item bg-image"
+        src='{% static "img/slide-3.jpg"%}'
+      >
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <p class="intro-title-top">
+                      Punta Diamante <br />
+                      Acapulco, Gro.
+                    </p>
+                    <h1 class="intro-title mb-4">
+                      <span class="color-b">Villas </span> Velato <br />
+                      Diamante
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                      <a href="#"><span class="price-a">venta | $ 4,5 MDP. / MXN</span></a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </img>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- End Intro Section -->
+  
+  <main id="main">
+    <!-- ======= Services Section ======= -->
+    <section class="section-services section-t8">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap d-flex justify-content-between">
+              <div class="title-box">
+                <h2 class="title-a">Nuestros Servicios</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-box-c foo">
+              <div class="card-header-c d-flex">
+                <div class="card-box-ico">
+                  <span class="bi bi-house"></span>
+                </div>
+                <div class="card-title-c align-self-center">
+                  <h2 class="title-c">¿Quieres Vender o Rentar tu propiedad? Contactanos!</h2>
+                </div>
+              </div>
+              <div class="card-body-c">
+                <p class="content-c">
+                  Contamos con excelentes medios de promoción para manejar tu propiedad y asesores capacitados que agilizaran el tiempo de promoción y gestoría de tu propiedad.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+              <div class="card-box-ico">
+                <span class="bi bi-house"></span>
+              </div>
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">Venta de Propiedades</h2>
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                Ofrecemos las mejores propiedades en Venta del puerto de Acapulco, Chilpancingo, CDMX, Cuernavaca y otros destinos del pais.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+  
+          <div class="col-md-4">
+            <div class="card-box-c foo">
+              <div class="card-header-c d-flex">
+                <div class="card-box-ico">
+                  <span class="bi bi-check2-all"></span>
+                </div>
+                <div class="card-title-c align-self-center">
+                  <h2 class="title-c">Renta de Propiedades</h2>
+                </div>
+              </div>
+              <div class="card-body-c">
+                <p class="content-c">
+                  Te ofrecemos propiedades en renta en las mejores zonas exclusivas en toda la franja turística de Acapulco.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-box-c foo">
+              <div class="card-header-c d-flex">
+                <div class="card-box-ico">
+                  <img
+                  src='{% static "img/logos/yate.svg"%}'  alt="" class="img-fluid">
+                </div>
+                <div class="card-title-c align-self-center">
+                  <h2 class="title-c">Venta y Renta de Yates</h2>
+                </div>
+              </div>
+              <div class="card-body-c">
+                <p class="content-c">
+                  Contamos con una amplia variedad de Yates en renta y venta para paseo y pesca en todo Acapulco.
+                  Aquí Podrás encontrar todo tipo de embarcaciones para poder vivir una experiencia inolvidable a bordo. Elige tu embarcación ideal y nosotros nos ocupamos del resto; todas las embarcaciones cuentan con una tripulación perfectamente calificada para otorgarte el mejor servicio.
+                  <p/>
+                  ¡Tu mejor experiencia, a un clic de distancia!
+  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
+  
+    <!-- ======= Latest Properties Section ======= -->
+    <section class="section-property section-t8">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap d-flex justify-content-between">
+              <div class="title-box">
+                <h2 class="title-a">Propiedades mas buscadas</h2>
+              </div>
+              <div class="title-link">
+                <a href="property-grid.html"
+                  >Ver más
+                  <span class="bi bi-chevron-right"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div id="property-carousel" class="swiper">
+          <div class="swiper-wrapper">
+            <div class="carousel-item-b swiper-slide">
+              <div class="card-box-a card-shadow">
+                <div class="img-box-a">
+                  <img
+                  src='{% static "img/1.jpg"%}'
+                    
+                    alt=""
+                    class="img-a img-fluid"
+                  />
+                </div>
+                <div class="card-overlay">
+                  <div class="card-overlay-a-content">
+                    <div class="card-header-a">
+                      <h2 class="card-title-a">
+                        <a href="property-single.html"
+                          >Zona Dorada <br />
+                          Fracc. Brisas del Marqués</a
+                        >
+                      </h2>
+                    </div>
+                    <div class="card-body-a">
+                      <div class="price-box d-flex">
+                        <span class="price-a">venta | $ 6,500.000</span>
+                      </div>
+                      <a href="#" class="link-a"
+                        >Ver más
+                        <span class="bi bi-chevron-right"></span>
+                      </a>
+                    </div>
+                    <div class="card-footer-a">
+                      <ul class="card-info d-flex justify-content-around">
+                        <li>
+                          <h4 class="card-info-title">Área</h4>
+                          <span
+                            >280m
+                            <sup>2</sup>
+                          </span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Recamaras</h4>
+                          <span>3</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Baños</h4>
+                          <span>3</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Estacionamientos</h4>
+                          <span>2</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End carousel item -->
+  
+            <div class="carousel-item-b swiper-slide">
+              <div class="card-box-a card-shadow">
+                <div class="img-box-a">
+                  <img
+                  src='{% static "img/2.jpg"%}'
+                    
+                    alt=""
+                    class="img-a img-fluid"
+                  />
+                </div>
+                <div class="card-overlay">
+                  <div class="card-overlay-a-content">
+                    <div class="card-header-a">
+                      <h2 class="card-title-a">
+                        <a href="property-single.html"
+                          >Zona Diamante <br />
+                          Boulevard Las Palmas</a
+                        >
+                      </h2>
+                    </div>
+                    <div class="card-body-a">
+                      <div class="price-box d-flex">
+                        <span class="price-a">venta | $ 6,000,000.00</span>
+                      </div>
+                      <a href="property-single.html" class="link-a"
+                        >Ver más
+                        <span class="bi bi-chevron-right"></span>
+                      </a>
+                    </div>
+                    <div class="card-footer-a">
+                      <ul class="card-info d-flex justify-content-around">
+                        <li>
+                          <h4 class="card-info-title">Área</h4>
+                          <span
+                            >125m
+                            <sup>2</sup>
+                          </span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Recamaras</h4>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Baños</h4>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Estacionamientos</h4>
+                          <span>1</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End carousel item -->
+  
+            <div class="carousel-item-b swiper-slide">
+              <div class="card-box-a card-shadow">
+                <div class="img-box-a">
+                  <img
+                  src='{% static "img/3.jpg"%}'
+                    
+                    alt=""
+                    class="img-a img-fluid"
+                  />
+                </div>
+                <div class="card-overlay">
+                  <div class="card-overlay-a-content">
+                    <div class="card-header-a">
+                      <h2 class="card-title-a">
+                        <a href="property-single.html"
+                          >Zona Dorada <br />
+                          Joyas de Brisa Mar</a
+                        >
+                      </h2>
+                    </div>
+                    <div class="card-body-a">
+                      <div class="price-box d-flex">
+                        <span class="price-a">rent | $ 15,500,000.00</span>
+                      </div>
+                      <a href="property-single.html" class="link-a"
+                        >Ver más
+                        <span class="bi bi-chevron-right"></span>
+                      </a>
+                    </div>
+                    <div class="card-footer-a">
+                      <ul class="card-info d-flex justify-content-around">
+                        <li>
+                          <h4 class="card-info-title">Area</h4>
+                          <span
+                            >620m
+                            <sup>2</sup>
+                          </span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Recamaras</h4>
+                          <span>5</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Baños</h4>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Estacionamientos</h4>
+                          <span>5</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End carousel item -->
+  
+            <div class="carousel-item-b swiper-slide">
+              <div class="card-box-a card-shadow">
+                <div class="img-box-a">
+                  <img
+                  src='{% static "img/4.jpg"%}'  
+                  
+                    alt=""
+                    class="img-a img-fluid"
+                  />
+                </div>
+                <div class="card-overlay">
+                  <div class="card-overlay-a-content">
+                    <div class="card-header-a">
+                      <h2 class="card-title-a">
+                        <a href="property-single.html"
+                          >Zona Dorada <br />
+                          Costera Miguel Aleman - Le Club</a
+                        >
+                      </h2>
+                    </div>
+                    <div class="card-body-a">
+                      <div class="price-box d-flex">
+                        <span class="price-a">renta | $ 30,000.00</span>
+                      </div>
+                      <a href="property-single.html" class="link-a"
+                        >Ver más
+                        <span class="bi bi-chevron-right"></span>
+                      </a>
+                    </div>
+                    <div class="card-footer-a">
+                      <ul class="card-info d-flex justify-content-around">
+                        <li>
+                          <h4 class="card-info-title">Área</h4>
+                          <span
+                            >80m
+                            <sup>2</sup>
+                          </span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Recamaras</h4>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Baños</h4>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <h4 class="card-info-title">Estacionamiento</h4>
+                          <span>1</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End carousel item -->
+          </div>
+        </div>
+        <div class="propery-carousel-pagination carousel-pagination"></div>
+      </div>
+    </section>
+    <!-- End Latest Properties Section -->
+  
+    <!-- ======= Acapulco Sites Section ======= -->
+    <section class="section-testimonials section-t8 nav-arrow-a">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap d-flex justify-content-between">
+              <div class="title-box">
+                <h2 class="title-a">Sitios mas visitados de Acapulco</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div id="testimonial-carousel" class="swiper">
+          <div class="swiper-wrapper">
+            <div class="carousel-item-a swiper-slide">
+              <div class="testimonials-box">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="testimonial-img">
+                      <img
+                      src='{% static "img/laQuebrada.jpg"%}'
+                      
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="testimonial-ico">
+                      <i class="bi bi-chat-left-quote-fill"></i>
+                    </div>
+                    <div class="testimonials-content">
+                      <p class="testimonial-text">
+                        La Quebrada es un acantilado de 45 metros de altura, con
+                        un canal de siete metros de ancho y cuatro de profundidad,
+                        está situado en el puerto de Acapulco, Guerrero, en el sur
+                        de México, el cual se creó al dinamitar un cerro.1​ Allí
+                        se hacen desde 1934 los famosos clavados realizados por
+                        jóvenes del puerto que en ocasiones lo escalan con una
+                        antorcha encendida.
+                      </p>
+                    </div>
+                    <div class="testimonial-author-box">
+                      <h5 class="testimonial-author">La Quebrada</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End carousel item -->
+  
+            <div class="carousel-item-a swiper-slide">
+              <div class="testimonials-box">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="testimonial-img">
+                      <img
+                      src='{% static "img/capillaPaz.jpg"%}'
+                        
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="testimonial-ico">
+                      <i class="bi bi-chat-left-quote-fill"></i>
+                    </div>
+                    <div class="testimonials-content">
+                      <p class="testimonial-text">
+                        La capilla Ecuménica La Paz, mejor conocida solamente como
+                        capilla de la Paz, está ubicada en la parte más alta del
+                        cerro El Guitarrón, brazo montañoso que rodea a la bahía
+                        de Acapulco, Guerrero, en el sur de México. Junto a ella,
+                        se eleva una enorme cruz de 42 metros de altura que la
+                        hace visible desde cualquier punto del puerto, situándose
+                        en una de las zonas más elevadas de Acapulco con 402 msnm.
+                      </p>
+                    </div>
+                    <div class="testimonial-author-box">
+                      <h5 class="testimonial-author">Capilla Ecuménica La Paz</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End carousel item -->
+  
+            <div class="carousel-item-a swiper-slide">
+              <div class="testimonials-box">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="testimonial-img">
+                      <img
+                      src='{% static "img/laRoketa.jpg"%}'
+
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="testimonial-ico">
+                      <i class="bi bi-chat-left-quote-fill"></i>
+                    </div>
+                    <div class="testimonials-content">
+                      <p class="testimonial-text">
+                        La Roqueta es una isla mexicana localizada al SO de la bahía de Acapulco, Guerrero, muy cerca de las playas de Caleta y Caletilla de esa ciudad, las cuales junto con la playa principal de la isla conforman uno de los lugares de mayor popularidad en el puerto como destino de sol y playa.
+                      </p>
+                    </div>
+                    <div class="testimonial-author-box">
+                      <h5 class="testimonial-author">Isla de La Roqueta</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End carousel item -->
+  
+  
+  
+  
+  
+          </div>
+        </div>
+        <div class="testimonial-carousel-pagination carousel-pagination"></div>
+      </div>
+    </section>
+    <!-- End Testimonials Section -->
+  </main>
+  <!-- End #main -->
+
+
+
+{% endblock %}

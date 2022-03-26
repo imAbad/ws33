@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla que recibe parametros</title>
+</head>
+<body>
+    <h1>Apodo del alumno: {{nombreApodo}} </h1>
+    <h1>La fecha de hoy es: {{fechaActual}}</h1>
+    <ul>
+        {% for leng in lenguajes %}
+        {% if leng == 'Python' %}
+            <li style="color: yellow;"> {{ leng }} </li>
+        {% else %}
+            <li>{{ leng }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>  
+</body>
+</html>

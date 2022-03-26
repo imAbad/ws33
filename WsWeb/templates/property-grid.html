@@ -1,0 +1,544 @@
+{% extends "layout.html" %} {% load static %} {%block search%}
+<!-- ======= Property Search Section ======= -->
+<div class="click-closed"></div>
+<!--/ Form Search Star /-->
+<div class="box-collapse">
+  <div class="title-box-d">
+    <h3 class="title-d">Buscar una propiedad</h3>
+  </div>
+  <span class="close-box-collapse right-boxed bi bi-x"></span>
+  <div class="box-collapse-wrap form">
+    <form class="form-a" method="GET" >
+      <div class="row">
+        <div class="col-md-12 mb-2">
+          <div class="form-group">
+            <label class="pb-2" for="Type">Palabra clave</label>
+            <input
+              type="text"
+              class="form-control form-control-lg form-control-a"
+              placeholder="Palabra clave" name = "palabra"
+            />
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="Type">Tipo</label>
+            <select class="form-control form-select form-control-a" id="Type">
+              <option>Tipo de operación</option>
+              <option>Compra</option>
+              <option>Renta</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="city">Ciudad</label>
+            <select class="form-control form-select form-control-a" id="city">
+              <option>Ciudad</option>
+              <option>Acapulco</option>
+              <option>Chilpancingo</option>
+              <option>Cuernavaca</option>
+              <option>CDMX</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="bedrooms">Habitaciones</label>
+            <select
+              class="form-control form-select form-control-a"
+              id="bedrooms"
+            >
+              <option>Sin habitaciones</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04 o mas</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="garages">Estacionamientos</label>
+            <select
+              class="form-control form-select form-control-a"
+              id="garages"
+            >
+              <option>Sin estacionamiento</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04 o mas</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="bathrooms">Baños</label>
+            <select
+              class="form-control form-select form-control-a"
+              id="bathrooms"
+            >
+              <option>Ninguno</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <options>04 o mas</options>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="price">Precio minimo</label>
+            <select class="form-control form-select form-control-a" id="price">
+              <option>Sin minimo</option>
+              <option>$2,000</option>
+              <option>$3,000</option>
+              <option>$5,000</option>
+              <option>$10,000</option>
+              <option>$15,000</option>
+              <option>$20,000</option>
+              <option>$30,000</option>
+              <option>$50,000</option>
+              <option>$100,000</option>
+              <option>$200,000</option>
+              <option>$500,000</option>
+              <option>$1,000,000</option>
+              <option>$2,000,000</option>
+              <option>$5,000,000</option>
+              <option>$10,000,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-b">Buscar propiedad</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End Property Search Section -->> {%endblock%} {%block btn%}
+<button
+  type="button"
+  class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarTogglerDemo01"
+>
+  <i class="bi bi-search"></i>
+</button>
+{%endblock%} {% block content %}
+
+<!-- ======= Property Search Section ======= -->
+
+<main id="main">
+  <!-- ======= Intro Single ======= -->
+  <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single">Nuestras Sorprendentes Propiedades</h1>
+            <span class="color-text-a">Propiedades</span>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+          <nav
+            aria-label="breadcrumb"
+            class="breadcrumb-box d-flex justify-content-lg-end"
+          >
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="">Inicio</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Propiedades
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Intro Single-->
+
+  <!-- ======= Property Grid ======= -->
+  <section class="property-grid grid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="grid-option">
+            <form>
+              <select class="custom-select">
+                <option selected>Todas</option>
+                <option value="1">Mas Recientes</option>
+                <option value="2">Renta</option>
+                <option value="3">Venta</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img
+                src='{% static "img/property-6.jpg"%}'
+                alt=""
+                class="img-a img-fluid"
+              />
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#"
+                      >204 Mount <br />
+                      Olive Road Two</a
+                    >
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a"
+                    >Click here to view
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span
+                        >340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img
+                src='{% static "img/property-1.jpg"%}'
+                alt=""
+                class="img-a img-fluid"
+              />
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#"
+                      >204 Mount <br />
+                      Olive Road Two</a
+                    >
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a"
+                    >Click here to view
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span
+                        >340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img
+                src='{% static "img/property-6.jpg"%}'
+                alt=""
+                class="img-a img-fluid"
+              />
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#"
+                      >204 Mount <br />
+                      Olive Road Two</a
+                    >
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a"
+                    >Click here to view
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span
+                        >340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img
+                src='{% static "img/property-7.jpg"%}'
+                alt=""
+                class="img-a img-fluid"
+              />
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#"
+                      >204 Mount <br />
+                      Olive Road Two</a
+                    >
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a"
+                    >Click here to view
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span
+                        >340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img
+                src='{% static "img/property-8.jpg"%}'
+                alt=""
+                class="img-a img-fluid"
+              />
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#"
+                      >204 Mount <br />
+                      Olive Road Two</a
+                    >
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a"
+                    >Click here to view
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span
+                        >340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img
+                src='{% static "img/property-10.jpg"%}'
+                alt=""
+                class="img-a img-fluid"
+              />
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#"
+                      >204 Mount <br />
+                      Olive Road Two</a
+                    >
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a"
+                    >Click here to view
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span
+                        >340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <nav class="pagination-a">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">
+                  <span class="bi bi-chevron-left"></span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item next">
+                <a class="page-link" href="#">
+                  <span class="bi bi-chevron-right"></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Property Grid Single-->
+</main>
+<!-- End #main -->
+
+{%endblock %}

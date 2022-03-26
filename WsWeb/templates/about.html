@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-single">¡No Vendemos Casas, Vendemos Hogares!</h1>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Quiénes somos
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Intro Single-->
+  
+    <!-- ======= About Section ======= -->
+    <section class="section-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 position-relative">
+            <div class="about-img-box">
+              <img src= '{% static "img/slide-about-1.jpg" %}' 
+               alt="" class="img-fluid">
+            </div>
+            <div class="sinse-box">
+              <h3 class="sinse-title">Grupo Inmobiliario
+                <span></span>
+                <br> WS Real Estate 33
+              </h3>
+              <p>Desde el 2017</p>
+            </div>
+          </div>
+          <div class="col-md-12 section-t8 position-relative">
+            <div class="row">
+              <div class="col-md-6 col-lg-5">
+                <img
+                src='{% static "img/logos/LOGO_WSRS.svg" %}' 
+                 alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-2  d-none d-lg-block position-relative">
+                <div class="title-vertical d-flex justify-content-start">
+                  <span>Grupo Inmobiliario Ws Real Estate 33</span>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5 section-md-t3">
+                <div class="title-box-d">
+                  <h3 class="title-d">Quienes
+                    <span class="color-d">somos?</span> 
+                  </h3>
+                </div>
+                <p class="color-text-a">
+                  - Somos una empresa mexicana dedicada a las Bienes Raíces, que ofrece los servicios integrales basados en las necesidades de nuestros clientes para brindarles la mejor asesoría inmobiliaria.
+                </p>              
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- ======= Mision section ======= -->
+    <section class="section-agents section-t8">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap d-flex justify-content-between">
+              <div class="title-box">
+                <h2 class="title-a">Misión</h2>
+                <p class="color-text-a">
+                  - Ofrecer servicios profesionales y efectivos para alcanzar la satisfacción total de nuestros clientes.
+                </p>
+                <div class="about-img-box">
+                  <img src='{% static "img/mision.jpg" %}'  
+                   alt="" class="img-fluid">
+                </div>
+              </div>                          
+            </div>           
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section-->
+  
+      <!-- ======= Vision section ======= -->
+      <section class="section-agents section-t8">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title-wrap d-flex justify-content-between">
+                <div class="title-box">
+                  <h2 class="title-a">Visión</h2>
+                  <p class="color-text-a">
+                    - Permanecer en el mercado con liderazgo y ofreciendo servicios de calidad.
+                  </p>
+                  <div class="about-img-box">
+                    <img src='{% static "img/vision.jpg" %}'  
+                     alt="" class="img-fluid">
+                  </div>  s
+                </div>             
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End About Section-->
+    
+          <!-- ======= Moral Values section ======= -->
+          <section class="section-agents section-t8">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-wrap d-flex justify-content-between">
+                    <div class="title-box">
+                      <h2 class="title-a">Valores</h2>
+                      <p class="color-text-a">
+                        Los valores que representan nuestro trabajo:
+                        <li>Ética</li>
+                        <li>Honestidad</li>
+                        <li>Compromiso</li>
+                        <li>Respeto</li>
+                        <li>Trabajo en equipo</li>
+                      </p>  
+                    </div>
+                    <div class="about-img-box">
+                      <img
+                      src='{% static "img/valores.webp" %}' 
+   alt="" class="img-fluid">
+                    </div>             
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- End About Section-->
+  
+  
+  </main><!-- End #main -->
+{% endblock %}

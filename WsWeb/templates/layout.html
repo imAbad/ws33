@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ws Real Estate 33</title>
+
+    <!-- Favicons -->
+
+    <link href='{% static "img/logos/LOGO_WSRSblanco-01.png" %}' rel="icon" />
+    <link href='{% static "img/logos/LOGO_WSRSblanco-01.png" %}' />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href='{% static "vendor/animate.css/animate.min.css" %}'
+      rel="stylesheet"
+    />
+    <link
+      href='{% static "vendor/bootstrap/css/bootstrap.min.css"%}'
+      rel="stylesheet"
+    />
+    <link
+      href='{% static "vendor/bootstrap-icons/bootstrap-icons.css" %}'
+      rel="stylesheet"
+    />
+    <link
+      href='{% static "vendor/swiper/swiper-bundle.min.css" %}'
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href='{% static "css/style.css" %}' />
+  </head>
+  <body>
+    {%block search%} {%endblock%}
+
+    <!-- ======= Header/Navbar ======= -->
+    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarDefault"
+          aria-controls="navbarDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <img
+          class="navbar-brand"
+          src='{% static "img/logos/LOGO_WSRS33.png" %}'
+          alt="logoWs33"
+          height="18%"
+          width="18%"
+          href="/"
+        />
+
+        <div
+          class="navbar-collapse collapse justify-content-center"
+          id="navbarDefault"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/about">Quienes somos!</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Servicios</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/searchProperty">Propiedades</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/acapulcoGolden">Conoce Acapulco!</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Vender una propiedad!</a>
+            </li>
+          </ul>
+        </div>
+
+        {% block btn%} {%endblock%}
+      </div>
+    </nav>
+    <!-- End Header/Navbar -->
+
+    <!-- Begin Block content -->
+
+    {% block content %} {% endblock %}
+
+    <!-- End Block content -->
+
+    <!-- ======= Footer ======= -->
+    <section class="section-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div class="widget-a">
+              <div class="w-header-a">
+                <h3 class="w-title-a text-brand">Ws Real Estate 33</h3>
+              </div>
+              <div class="w-body-a">
+                <p class="w-text-a color-text-a">
+                  Somos una empresa dedicada a la compra y venta de bienes
+                  inmuebles. acercate a los mejores, acercate a nosotros.
+                </p>
+              </div>
+              <div class="w-footer-a">
+                <ul class="list-unstyled">
+                  <li class="color-a">
+                    <span class="color-text-a">Email .</span>
+                    Grupoinmobiliario_wsrealestate33@hotmail.com
+                  </li>
+                  <li class="color-a">
+                    <span class="color-text-a">Telefono .</span> +52 744 672
+                    2133, +52 744 383 7029
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 section-md-t3">
+            <div class="widget-a">
+              <div class="w-header-a">
+                <h3 class="w-title-a text-brand">Ciudades</h3>
+              </div>
+              <div class="w-body-a">
+                <ul class="list-unstyled">
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i>
+                    <a>Acapulco</a>
+                  </li>
+
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i>
+                    <a>Chilpancingo</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i>
+                    <a>Cuernavaca</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i>
+                    <a>Puebla</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i>
+                    <a>CDMX</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="nav-footer">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="">Inicio</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="/about">Quienes somos</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="/services">Servicios</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a href="/searchProperty">Propiedades</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a href="/acapulcoGolden">Conoce Acapulco</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="/contact">Quiero vender una propiedad</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="socials-a">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.facebook.com/WsRealEstateAcapulcoMex"
+                    class="link-one"
+                  >
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://bit.ly/3teNnF7" class="link-one">
+                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-one">
+                    <i class="bi bi-instagram" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-footer">
+              <p class="copyright color-text-a">
+                &copy; Copyright
+                <span class="color-a">EstateAgency</span> All Rights Reserved.
+              </p>
+            </div>
+            <div class="credits">
+              <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
+          -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End  Footer -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js"  %}'></script>
+    <script src='{% static "vendor/swiper/swiper-bundle.min.js"  %}'></script>
+    <script src='{% static "vendor/php-email-form/validate.js"  %}'></script>
+
+    <!-- Template Main JS File -->
+
+    <script src='{% static "js/main.js"  %}'></script>
+  </body>
+</html>
