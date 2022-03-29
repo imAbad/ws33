@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yzns50n35-4&pm4!l_$k1m9nzyb&9zred%s6-2f^*79e+76f#u
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 # Desactivamos el debug para deployar la aplicación
-DEBUG = False
+DEBUG = True
 
 # Vamos a permitir que todos los host sean permitidos
 # Cambiar por el nombre del dominio cuando ya sea la versión final
@@ -145,3 +145,11 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'WsWeb\static'),)
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configuramos el correo electrónico
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.hostinger.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'contact@giwsrealestate33.com.mx'
+EMAIL_HOST_PASSWORD = 'wsReal33.'

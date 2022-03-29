@@ -1,5 +1,12 @@
-from django.shortcuts import render
+from email import message
+from re import sub, template
+from urllib import request
+from django.shortcuts import render, redirect
 from Apps.Propiedades.models import Properties
+from django.conf import settings
+from django.core.mail import EmailMessage, EmailMultiAlternatives, send_mail
+from django.template.loader import get_template, render_to_string
+from django.contrib import messages
 
 
 def index(request):
@@ -19,7 +26,25 @@ def agents(request):
 
 
 def contact(request):
-    return render(request, "contact.html")
+    if request.method == "POST":
+        subject = request.POST.get('subject')
+        message = 'Nombre: ' + request.POST.get('name') + '\nCorreo: ' + request.POST.get('email') + '\nMensaje: ' + request.POST.get('message')
+        email = settings.EMAIL_HOST_USER
+        
+        recipient_list = ['contact@giwsrealestate33.com.mx']
+        
+        send_mail(subject, message, email, recipient_list)
+        return render(request, 'contact.html')
+        
+    return render(request, 'contact.html')
+
+
+        
+
+
+
+
+
 
 
 def services(request):
