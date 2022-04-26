@@ -1,45 +1,42 @@
 from django.db import models
-import uuid
+from Apps.Propiedades.choices import propiedades, operaciones, moneda
+from django.utils.timezone import datetime
 
-# Create your models here.
-
-
-class Properties(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    nombrePropiedad = models.CharField(max_length=40, null=True)
+class Properties (models.Model, models.DecimalField):
+    nombre = models.CharField(max_length=50)
+    
+    slug = models.SlugField(max_length = 250)
+    
+    
+    descripcion = models.TextField()
+    ubicacion = models.CharField(max_length=50)
+    costo = models.DecimalField(max_digits=15, decimal_places=2)
+    moneda = models.CharField(
+        max_length=10, choices=moneda, default='')
+    habitaciones = models.IntegerField()
+    banos = models.IntegerField()
+    estacionamientos = models.IntegerField()
+    terreno = models.DecimalField(max_digits=10, decimal_places=2)
+    construccion = models.DecimalField(max_digits=10, decimal_places=2)
+    pisos = models.IntegerField()
+    operacion = models.CharField(
+        max_length=10, choices=operaciones, default='')
+    propiedad = models.CharField(
+        max_length=20, choices=propiedades, default='')
+    
+   
+    
+   
 
     def __str__(self):
-        return"{0}".format(self.nombrePropiedad)
-    tipos = [
-        ('Cas', 'Casa'),
-        ('Dep', 'Departamento'),
-        ('Vil', 'Villa'),
-        ('Res', 'Residencia'),
-        ('Ofi', 'Oficina'),
-        ('Ter', 'Terreno'),
-        ('Bod', 'Bodega'),
-        ('Des', 'Desarrollo'),
-        ('Edi', 'Edificio')
-    ]
-    tipoPropiedad = models.CharField(
-        max_length=12, choices=tipos, default='Casa')
-    operaciones = [
-        ('Venta', 'Venta'),
-        ('Renta', 'Renta')
-    ]
-    tipOperacion = models.CharField(
-        max_length=5, choices=operaciones, default='V')
-    amenidades = [
-        ('AC', 'Aire Acondicionado'), ('CCTV', 'Camaras de Seguridad'), ('Security', 'Seguridad privada'), ('Tenis', 'Cancha de tenis'), ('Futbol', 'Cancha de fútbol'), ('Terraza', 'Terraza'), ('Alberca', 'Alberca'), ('Jacuzzi', 'Jacuzzi'), ('internet', 'WiFi'), ('Cocina', 'Cocina Integral'), ('Aljibe', 'Aljibe'), ('Vista', 'Vista al Mar'), ('GYM', 'Gimnasio'), ('AreasVerdes', 'Áreas Verdes')
-    ]
-    tipoAmenidades = models.TextField(max_length=25, choices=amenidades)
-    descripcion = models.TextField(max_length=2000, null=False, blank=False)
-    ubicacion = models.CharField(max_length=35, null=False, blank=False)
-    costo = models.SlugField(max_length=255, null=False)
-    habitaciones = models.IntegerField(default=0, null=False, blank=False)
-    banos = models.IntegerField(default=0, null=False, blank=False)
-    estacionamientos = models.IntegerField(default=0, null=False, blank=False)
-    metrosTerreno = models.IntegerField(default=0, null=False, blank=False)
-    metrosConstruccion = models.IntegerField(
-        default=0, null=False, blank=False)
-    pisos = models.IntegerField(blank=True)
+        return self.nombre
+
+
+class imagenPropiedades(models.Model):
+    imagen = models.ImageField(upload_to='propiedades')
+    propiedad = models.ForeignKey(
+    Properties, on_delete=models.CASCADE, related_name="imagenes")
+    
+    def __str__(self):
+        return self.propiedad.nombre
+    

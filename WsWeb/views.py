@@ -1,16 +1,21 @@
 from email import message
 from re import sub, template
 from urllib import request
-from django.shortcuts import render, redirect
-from Apps.Propiedades.models import Properties
+from django.shortcuts import render, redirect, get_object_or_404
+from Apps.Propiedades.models import Properties, imagenPropiedades
 from django.conf import settings
 from django.core.mail import EmailMessage, EmailMultiAlternatives, send_mail
 from django.template.loader import get_template, render_to_string
 from django.contrib import messages
+from django.views.generic.detail import DetailView
 
 
 def index(request):
-    return render(request, "index.html")
+    propiedades = Properties.objects.all()
+    context = {
+        'propiedades': propiedades
+    }
+    return render(request, "index.html", context)
 
 
 def about(request):
@@ -28,54 +33,38 @@ def agents(request):
 def contact(request):
     if request.method == "POST":
         subject = request.POST.get('subject')
-        message = 'Nombre: ' + request.POST.get('name') + '\nCorreo: ' + request.POST.get('email') + '\nMensaje: ' + request.POST.get('message')
+        message = 'Nombre: ' + request.POST.get('name') + '\nCorreo: ' + request.POST.get(
+            'email') + '\nMensaje: ' + request.POST.get('message')
         email = settings.EMAIL_HOST_USER
-        
+
         recipient_list = ['contact@giwsrealestate33.com.mx']
-        
+
         send_mail(subject, message, email, recipient_list)
         return render(request, 'contact.html')
-        
+
     return render(request, 'contact.html')
-
-
-        
-
-
-
-
-
 
 
 def services(request):
     return render(request, "services.html")
 
 
-def Property(request):
-    property = Properties.objects.all()
+def Property(request, pk):
+    propiedad = get_object_or_404(Properties, pk = pk)
+    img = imagenPropiedades.objects.filter(propiedad = propiedad)
+    context = {'propiedad': propiedad,
+               'img' : img
+               }
 
-    return render(request, "property-single.html", {'property': property})
+    return render(request, "property-single.html", context)
+
+
+
 
 
 def busquedaPropiedades(request):
-    #queryset = request.GET.get("palabra")
-    """
-    property = propiedades.objects.filter(estado=True)
-
-    if queryset:
-        property = propiedades.object.filter(
-
-            Q(nombrePropiedad=queryset) |
-            Q(tipoPropiedad=queryset) |
-            Q(tipOperacion=queryset) |
-            Q(tipoAmenidades=queryset) |
-            Q(ubicacion=queryset) |
-            Q(costo=queryset)
-
-
-      ).distinct()
-      #Añadir este diccionario al final del return en caso de ser necesario
-      {'property': property}
-     """
-
-    return render(request, "property-grid.html")
+    propiedades = Properties.objects.all()
+    context = {
+        'propiedades': propiedades
+    }
+    return render(request, "property-grid.html", context)
